@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeMaker</title>
+    <style>
+      /* CSS Styles */
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .codemaker-container {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      label,
+      input,
+      select,
+      button {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .answer {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="codemaker-container">
+      <form id="questionForm">
+        <label for="question">Enter your question:</label>
+        <input type="text" id="question" name="question" /><br />
+        <label for="question">Enter syllabus item number:</label>
+        <input type="text" id="syllabus" name="syllabus" /><br />
+        <label for="question">Enter syllabus link:</label>
+        <input type="text" id="syllabus-link" name="syllabus-link" /><br />
+        <div>
+          <label for="question"
+            >If you want to show an image, insert a link</label
+          >
+          <div>
+            <input type="checkbox" name="image-path" id="image" />
+            <input
+              placeholder="https://..."
+              type="text"
+              id="image-path"
+              name="image-path"
+            /><br />
+          </div>
+        </div>
+        <label for="answerFormat">Select answer format:</label>
+        <select id="answerFormat" name="answerFormat">
+          <option value="single">Single Correct Answer</option>
+          <option value="multi">Multi Correct Answer</option>
+          <option value="field">Input Field</option>
+          <option value="select">Select</option>
+        </select>
+        <div id="answerOptions"></div>
+        <div id="btns">
+        <button type="button" id="addAnswers" onclick="addAnswer()">
+          Add Answer
+        </button>
+        <button type="button" id="generateCodeButton" onclick="generateCode()">
+          Generate Code
+        </button>
+      </div>
+      </form>
+      <div
+        id="generatedCode"
+        style="white-space: pre-wrap; margin-top: 20px"
+      ></div>
+    </div>
+
+    <script src="script.js">
+      
+    </script>
+  </body>
+</html>
